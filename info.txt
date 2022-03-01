@@ -1,0 +1,6 @@
+Ultima
+reserva-hora-paso_1
+
+Quede en el media query para la imagen de fondo
+cuando quise hacer lo del background para el logo, el menu desplegable se me fue a la derecha
+revisar voy aca

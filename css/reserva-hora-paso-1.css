@@ -1,0 +1,24 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    height: 100%;
+    margin: 1rem 2rem;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+    background-color: var(--background-color-light);
+}
+
+
+/*Estilos para desktop*/
+
+@media (min-width: 950px) {
+    .actions {
+        background-color: var(--theme-color);
+    }
+}

@@ -1,0 +1,16 @@
+.subtitle-section {
+    border: 2px dashed orange;
+    min-height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: -8rem; */
+}
+
+.subtitle-section__text {
+    background-color: var(--button-third-color);
+    padding: 0.6rem;
+    font-size: 1rem;
+    color: var(--text-color-inverse);
+    font-weight: 400;
+}

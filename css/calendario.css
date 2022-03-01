@@ -1,0 +1,82 @@
+/* contenedro calendario */
+
+.calendar {
+    padding: 20px 10px;
+    background-color: var(--color-bg-calendar);
+    border-radius: 0.2rem;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.calendar__header {
+    color: var(--secondary-color);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.calendar .control {
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 5px;
+    border-radius: 100%;
+    background-color: lightgray;
+}
+
+.grid__header,
+.grid__body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.grid__header {
+    /* margin-bottom: 1.2rem; */
+    color: var(--secondary-color);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    grid-auto-rows: 40px;
+}
+
+.grid__body {
+    grid-auto-rows: 40px;
+    color: var(--color-cell);
+}
+
+.grid__cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgray;
+}
+
+.grid__cell--gd {
+    cursor: pointer;
+}
+
+.grid__cell--selected {
+    color: white;
+    font-weight: bold;
+    background-color: yellow;
+    border-radius: 100%;
+}
+
+.grid__cell--available-day {
+    color: white;
+    font-weight: bold;
+    background-color: var(--button-third-color);
+    border-radius: 100%;
+}
+
+.grid__cell--disabled {
+    color: lightgray;
+    cursor: not-allowed;
+}
