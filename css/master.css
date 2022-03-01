@@ -167,7 +167,6 @@ main {
 }
 
 .header-section {
-    /* border: 2px dashed orange; */
     min-height: 4rem;
     /* class="" 4remseccion__texto; */
     display: flex;
@@ -178,11 +177,14 @@ main {
 }
 
 .header-section__text {
+    /* border: 2px dashed red; */
     background-color: var(--secondary-color);
     padding: 0.6rem;
     font-size: 1rem;
     color: var(--text-color-inverse);
     font-weight: 400;
+    display: inline-block;
+    width: 15rem;
 }
 
 .button {

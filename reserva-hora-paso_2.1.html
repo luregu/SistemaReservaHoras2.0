@@ -40,7 +40,7 @@
     </section>
 
     <main>
-        <form action="" class="container">
+        <form action="" class="container-paso2">
             <!-- header -->
             <section class="header-section">
                 <h2 class="header-section__title">
@@ -58,63 +58,114 @@
 
                 <!-- Calendario -->
                 <div class="calendar" id="calendar">
-                    <!-- <div class="calendar__header">
-                        <button type="button" class="control  control--prev">&lt;</button>
-                        <span class="month-name">FEB 2022</span>
-                        <button type="button" class="control  control--next">&gt;</button>
-                    </div>
-                    <div class="calendar__body">
-                        <div class="grid">
-                            <div class="grid__header">
-                                <span class="grid__cell grid__cell--gh">L</span>
-                                <span class="grid__cell grid__cell--gh">M</span>
-                                <span class="grid__cell grid__cell--gh">M</span>
-                                <span class="grid__cell grid__cell--gh">J</span>
-                                <span class="grid__cell grid__cell--gh">V</span>
-                                <span class="grid__cell grid__cell--gh">S</span>
-                                <span class="grid__cell grid__cell--gh">D</span>
-                            </div>
-                            <div class="grid__body">
-                                <span class="grid__cell grid__cell--gd grid__cell--selected">1</span>
-                                <span class="grid__cell grid__cell--gd">2</span>
-                                <span class="grid__cell grid__cell--gd">3</span>
-                                <span class="grid__cell grid__cell--gd">4</span>
-                                <span class="grid__cell grid__cell--gd">5</span>
-                                <span class="grid__cell grid__cell--gd">6</span>
-                                <span class="grid__cell grid__cell--gd">7</span>
-                                <span class="grid__cell grid__cell--gd">8</span>
-                                <span class="grid__cell grid__cell--gd">9</span>
-                                <span class="grid__cell grid__cell--gd">10</span>
-                                <span class="grid__cell grid__cell--gd">11</span>
-                                <span class="grid__cell grid__cell--gd">12</span>
-                                <span class="grid__cell grid__cell--gd">13</span>
-                                <span class="grid__cell grid__cell--gd">14</span>
-                                <span class="grid__cell grid__cell--gd">15</span>
-                                <span class="grid__cell grid__cell--gd">16</span>
-                                <span class="grid__cell grid__cell--gd">17</span>
-                                <span class="grid__cell grid__cell--gd">18</span>
-                                <span class="grid__cell grid__cell--gd grid__cell--available-day">19</span>
-                                <span class="grid__cell grid__cell--gd">20</span>
-                                <span class="grid__cell grid__cell--gd">21</span>
-                                <span class="grid__cell grid__cell--gd">22</span>
-                                <span class="grid__cell grid__cell--gd">23</span>
-                                <span class="grid__cell grid__cell--gd">24</span>
-                                <span class="grid__cell grid__cell--gd">25</span>
-                                <span class="grid__cell grid__cell--gd">26</span>
-                                <span class="grid__cell grid__cell--gd">27</span>
-                                <span class="grid__cell grid__cell--gd">28</span>
-                                <span class="grid__cell grid__cell--gd grid__cell--disabled">29</span>
-                                <span class="grid__cell grid__cell--gd grid__cell--disabled">30</span>
-                                <span class="grid__cell grid__cell--gd grid__cell--disabled">31</span>
-                                <span class="grid__cell grid__cell--gd grid__cell--disabled">32</span>
-                                <span class="grid__cell grid__cell--gd grid__cell--disabled">33</span>
-                                <span class="grid__cell grid__cell--gd grid__cell--disabled">34</span>
-                                <span class="grid__cell grid__cell--gd grid__cell--disabled">35</span>
-
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
+
+                <!-- Calendario solo por dias del mes-->
+                <div class="calendar-day" id="calendar-day">
+                </div>
+
+                <section class="profesionales">
+                    <article class="profesional">
+                        <div class="profesional__datos">
+                            <span class="profesional__foto">+</span>
+                            <span class="profesional__nombre"> Nombre del profesional </span>
+                        </div>
+                        <article class="horarios">
+                            <button type="button" class="horario horario--selected ">
+                                <span class="horario__texto">16:00</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">16:30</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">17:00</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">17:30</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">18:00</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">18:30</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">19:00</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">19:30</span>
+                            </button>
+
+                        </article>
+                    </article>
+                    <article class="profesional">
+                        <div class="profesional__datos">
+                            <span class="profesional__foto">+</span>
+                            <span class="profesional__nombre"> Nombre del profesional </span>
+                        </div>
+                        <article class="horarios">
+                            <button type="button" class="horario horario--selected ">
+                                <span class="horario__texto">16:00</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">16:30</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">17:00</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">17:30</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">18:00</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">18:30</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">19:00</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">19:30</span>
+                            </button>
+
+                        </article>
+                    </article>
+                    <article class="profesional">
+                        <div class="profesional__datos">
+                            <span class="profesional__foto">+</span>
+                            <span class="profesional__nombre"> Nombre del profesional </span>
+                        </div>
+                        <article class="horarios">
+                            <button type="button" class="horario horario--selected ">
+                                <span class="horario__texto">16:00</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">16:30</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">17:00</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">17:30</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">18:00</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">18:30</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">19:00</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">19:30</span>
+                            </button>
+
+                        </article>
+                    </article>
+                </section>
+
 
             </section>
 
@@ -130,12 +181,16 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es.min.js"></script>
     <script type="text/javascript" src="/js/calendario.js"></script>
+    <script type="text/javascript" src="/js/calendarioDiasSemana.js"></script>
     <script type="text/javascript">
         let calendar = new Calendar('calendar');
         calendar.getElement().addEventListener('change', e => {
             //document.getElementById('calendar').addEventListener('change', e => {
-            //console.log(calendar.value().format('LLL'));
+            console.log(calendar.value().format('LLL'));
         });
+
+        let calendarDay = new CalendarDay('calendar-day');
+        console.log(calendarDay);
     </script>
 
 </body>

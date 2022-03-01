@@ -1,6 +1,7 @@
 /* contenedro calendario */
 
-.calendar {
+.calendar,
+.calendar-day {
     padding: 20px 10px;
     background-color: var(--color-bg-calendar);
     border-radius: 0.2rem;
@@ -10,7 +11,8 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.calendar__header {
+.calendar__header,
+.calendar-day__header {
     color: var(--secondary-color);
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
@@ -20,7 +22,12 @@
     margin-bottom: 2rem;
 }
 
-.calendar .control {
+.calendar-day__header--margin0 {
+    margin-bottom: 0;
+}
+
+.calendar .control,
+.control-day {
     color: white;
     font-weight: bold;
     font-size: large;
