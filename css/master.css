@@ -4,6 +4,8 @@
     --theme-color: white;
     --primary-color: #00314F;
     --secondary-color: #0363AD;
+    --third-color: #1669B1;
+    --fourth-color: #C4C4C4;
     --text-color-inverse: white;
     --text-color: #3B3B3B;
     --button-primary-color: #002E54;
@@ -14,6 +16,7 @@
     --color-bg-calendar: white;
     --color-cell: gray;
     --color-cell-disabled: red;
+    --color-day-selected: #F8BE1C;
     font-size: 16px;
     /*se define fontzie a 16 px y luego trabar con rem para poder escalar sitio */
 }
@@ -214,6 +217,9 @@ main {
         align-items: center;
         height: 200px;
     }
+    .header-section {
+        margin-left: 4rem;
+    }
     .contenedor-logo {
         width: 80%;
         height: 60%;
@@ -261,7 +267,7 @@ main {
     }
     .container {
         background-color: #FFFFFF;
-        height: 60%;
+        height: 85%;
         width: 80%;
         margin: 0 auto;
         opacity: 0.8;

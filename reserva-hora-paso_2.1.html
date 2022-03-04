@@ -40,7 +40,7 @@
     </section>
 
     <main>
-        <form action="" class="container-paso2">
+        <form action="" class="container">
             <!-- header -->
             <section class="header-section">
                 <h2 class="header-section__title">
@@ -57,17 +57,58 @@
             <section class="content">
 
                 <!-- Calendario -->
-                <div class="calendar" id="calendar">
+                <div class="container-calendar">
+                    <div class="calendar" id="calendar">
+                    </div>
+                    <div class="descripcion-calendario">
+                        <div class="circle circle--selected"></div>
+                        <span class="descripcion-calendario__disponible">Días con horas disponibles</span>
+                        <div class="circle circle--avaible"></div>
+                        <span class="descripcion-calendario__seleccionado">Día seleccionado</span>
+                    </div>
                 </div>
-
                 <!-- Calendario solo por dias del mes-->
                 <div class="calendar-day" id="calendar-day">
                 </div>
 
+
                 <section class="profesionales">
                     <article class="profesional">
                         <div class="profesional__datos">
-                            <span class="profesional__foto">+</span>
+                            <img src="/img/IconoMas.png" class="profesional__foto" alt="foto-profesional">
+                            <span class="profesional__nombre"> Nombre del profesional </span>
+                        </div>
+                        <article class="horarios">
+                            <button type="button" class="button horario horario--selected ">
+                                <span class="horario__texto">16:00</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">16:30</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">17:00</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">17:30</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">18:00</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">18:30</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">19:00</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">19:30</span>
+                            </button>
+
+                        </article>
+                    </article>
+                    <article class="profesional">
+                        <div class="profesional__datos">
+                            <img src="/img/IconoMas.png" class="profesional__foto" alt="foto-profesional">
                             <span class="profesional__nombre"> Nombre del profesional </span>
                         </div>
                         <article class="horarios">
@@ -100,40 +141,8 @@
                     </article>
                     <article class="profesional">
                         <div class="profesional__datos">
-                            <span class="profesional__foto">+</span>
-                            <span class="profesional__nombre"> Nombre del profesional </span>
-                        </div>
-                        <article class="horarios">
-                            <button type="button" class="horario horario--selected ">
-                                <span class="horario__texto">16:00</span>
-                            </button>
-                            <button type="button" class="horario">
-                                <span class="horario__texto">16:30</span>
-                            </button>
-                            <button type="button" class="horario">
-                                <span class="horario__texto">17:00</span>
-                            </button>
-                            <button type="button" class="horario">
-                                <span class="horario__texto">17:30</span>
-                            </button>
-                            <button type="button" class="horario">
-                                <span class="horario__texto">18:00</span>
-                            </button>
-                            <button type="button" class="horario">
-                                <span class="horario__texto">18:30</span>
-                            </button>
-                            <button type="button" class="horario">
-                                <span class="horario__texto">19:00</span>
-                            </button>
-                            <button type="button" class="horario">
-                                <span class="horario__texto">19:30</span>
-                            </button>
-
-                        </article>
-                    </article>
-                    <article class="profesional">
-                        <div class="profesional__datos">
-                            <span class="profesional__foto">+</span>
+                            <!-- <span class="profesional__foto"><img src="/img/IconoMas.png" alt="foto-profesional"></span> -->
+                            <img src="/img/IconoMas.png" class="profesional__foto" alt="foto-profesional">
                             <span class="profesional__nombre"> Nombre del profesional </span>
                         </div>
                         <article class="horarios">

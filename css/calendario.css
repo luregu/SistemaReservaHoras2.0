@@ -13,7 +13,7 @@
 
 .calendar__header,
 .calendar-day__header {
-    color: var(--secondary-color);
+    color: var(--third-color);
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     display: flex;
@@ -72,7 +72,7 @@
 .grid__cell--selected {
     color: white;
     font-weight: bold;
-    background-color: yellow;
+    background-color: var(--color-day-selected);
     border-radius: 100%;
 }
 
@@ -86,4 +86,11 @@
 .grid__cell--disabled {
     color: lightgray;
     cursor: not-allowed;
+}
+
+@media (min-width: 950px) {
+    .calendar {
+        min-width: 300px;
+        max-width: 365px;
+    }
 }
