@@ -61,9 +61,9 @@
                     <div class="calendar" id="calendar">
                     </div>
                     <div class="descripcion-calendario">
-                        <div class="circle circle--selected"></div>
-                        <span class="descripcion-calendario__disponible">Días con horas disponibles</span>
                         <div class="circle circle--avaible"></div>
+                        <span class="descripcion-calendario__disponible">Días con horas disponibles</span>
+                        <div class="circle circle--selected"></div>
                         <span class="descripcion-calendario__seleccionado">Día seleccionado</span>
                     </div>
                 </div>
@@ -72,36 +72,51 @@
                 </div>
 
 
+
                 <section class="profesionales">
+
+                    <article class="profesionales__header">
+
+                        <div class="fecha-especialidad">
+                            <span class="fecha">Martes 04 de Enero</span>
+                            <span class="especialidad">Medicina General</span>
+                        </div>
+
+                        <div class="busqueda-especialista">
+                            <label for="especialista">Buscar por Especialista</label>
+                            <input type="text" name="especialista" id="especialista" placeholder=" Buscar especialista">
+                        </div>
+                    </article>
+
                     <article class="profesional">
                         <div class="profesional__datos">
                             <img src="/img/IconoMas.png" class="profesional__foto" alt="foto-profesional">
                             <span class="profesional__nombre"> Nombre del profesional </span>
                         </div>
                         <article class="horarios">
-                            <button type="button" class="button horario horario--selected ">
-                                <span class="horario__texto">16:00</span>
+                            <button type="button" class="horario">16:00
+                                <!-- <span class="horario__texto">16:00</span> -->
                             </button>
-                            <button type="button" class="horario">
-                                <span class="horario__texto">16:30</span>
+                            <button type="button" class="horario">16:30
+                                <!-- <span class="horario__texto">16:30</span> -->
                             </button>
-                            <button type="button" class="horario">
-                                <span class="horario__texto">17:00</span>
+                            <button type="button" class="horario">17:00
+                                <!-- <span class="horario__texto">17:00</span> -->
                             </button>
-                            <button type="button" class="horario">
-                                <span class="horario__texto">17:30</span>
+                            <button type="button" class="horario">17:30
+                                <!-- <span class="horario__texto">17:30</span> -->
                             </button>
-                            <button type="button" class="horario">
-                                <span class="horario__texto">18:00</span>
+                            <button type="button" class="horario">18:00
+                                <!-- <span class="horario__texto">18:00</span> -->
                             </button>
-                            <button type="button" class="horario">
-                                <span class="horario__texto">18:30</span>
+                            <button type="button" class="horario">18:30
+                                <!-- <span class="horario__texto">18:30</span> -->
                             </button>
-                            <button type="button" class="horario">
-                                <span class="horario__texto">19:00</span>
+                            <button type="button" class="horario">19:00
+                                <!-- <span class="horario__texto">19:00</span> -->
                             </button>
-                            <button type="button" class="horario">
-                                <span class="horario__texto">19:30</span>
+                            <button type="button" class="horario">19:30
+                                <!-- <span class="horario__texto">19:30</span> -->
                             </button>
 
                         </article>
@@ -112,7 +127,7 @@
                             <span class="profesional__nombre"> Nombre del profesional </span>
                         </div>
                         <article class="horarios">
-                            <button type="button" class="horario horario--selected ">
+                            <button type="button" class="horario ">
                                 <span class="horario__texto">16:00</span>
                             </button>
                             <button type="button" class="horario">
@@ -146,7 +161,41 @@
                             <span class="profesional__nombre"> Nombre del profesional </span>
                         </div>
                         <article class="horarios">
-                            <button type="button" class="horario horario--selected ">
+                            <button type="button" class="horario ">
+                                <span class="horario__texto">16:00</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">16:30</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">17:00</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">17:30</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">18:00</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">18:30</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">19:00</span>
+                            </button>
+                            <button type="button" class="horario">
+                                <span class="horario__texto">19:30</span>
+                            </button>
+
+                        </article>
+                    </article>
+                    <article class="profesional">
+                        <div class="profesional__datos">
+                            <!-- <span class="profesional__foto"><img src="/img/IconoMas.png" alt="foto-profesional"></span> -->
+                            <img src="/img/IconoMas.png" class="profesional__foto" alt="foto-profesional">
+                            <span class="profesional__nombre"> Nombre del profesional </span>
+                        </div>
+                        <article class="horarios">
+                            <button type="button" class="horario ">
                                 <span class="horario__texto">16:00</span>
                             </button>
                             <button type="button" class="horario">
@@ -181,7 +230,7 @@
             <!-- footer -->
             <section class="actions">
                 <button class="button button--blue-light">Volver</button>
-                <button class="button">Continuar</button>
+                <button id="button-continuar" class="button button--display">Continuar</button>
             </section>
         </form>
 
@@ -191,15 +240,17 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es.min.js"></script>
     <script type="text/javascript" src="/js/calendario.js"></script>
     <script type="text/javascript" src="/js/calendarioDiasSemana.js"></script>
+    <script type="text/javascript" src="/js/reserva-hora-paso-2.1.js"></script>
+
     <script type="text/javascript">
         let calendar = new Calendar('calendar');
         calendar.getElement().addEventListener('change', e => {
             //document.getElementById('calendar').addEventListener('change', e => {
-            console.log(calendar.value().format('LLL'));
+            // console.log(calendar.value().format('LLL'));
         });
 
         let calendarDay = new CalendarDay('calendar-day');
-        console.log(calendarDay);
+        // console.log(calendarDay);
     </script>
 
 </body>

@@ -45,7 +45,8 @@ header {
     width: 192px;
     position: relative;
     top: 15px;
-    left: 139px;
+    left: 7.5rem;
+    /* left: 139px; */
 }
 
 .titulo-menu {
@@ -187,7 +188,9 @@ main {
     color: var(--text-color-inverse);
     font-weight: 400;
     display: inline-block;
-    width: 15rem;
+    width: 14rem;
+    /* width: 15rem; */
+    /*probar en pantalla 1*/
 }
 
 .button {

@@ -1,7 +1,7 @@
 class CalendarDay {
     constructor(id) {
-        console.log('id: ', id)
-            //this.cells = [];
+        // console.log('id: ', id)
+        //this.cells = [];
         this.selectedDay = null;
         //this.selectedDatePrevAvaible = null;
         //this.avaibleDays = [moment('2022-03-04'), moment('2022-03-10'), moment('2022-03-18'), moment('2022-03-24')];
@@ -54,8 +54,8 @@ class CalendarDay {
 
     showHoursAvaible() {
         this.elDayName.innerHTML = this.currentDay.format('dddd DD [de] MMMM');
-        console.log('elDayName : ', this.elDayName);
-        console.log('calendario por dia');
+        // console.log('elDayName : ', this.elDayName);
+        // console.log('calendario por dia');
     }
     changeDay(next = true) {
         if (next) {

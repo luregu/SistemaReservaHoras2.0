@@ -4,7 +4,7 @@ class Calendar {
         this.cells = [];
         this.selectedDate = null;
         this.selectedDatePrevAvaible = null;
-        this.avaibleDays = [moment('2022-03-04'), moment('2022-03-10'), moment('2022-03-18'), moment('2022-03-24')];
+        this.avaibleDays = [moment('2022-03-10'), moment('2022-03-18'), moment('2022-03-24')];
         this.currentMonth = moment();
         //obtenemos el elemnento contenedor de nuestro calendario
         this.elCalendar = document.getElementById(id);
@@ -99,6 +99,10 @@ class Calendar {
                 if (this.cells[i].isInCurrentMonth) {
                     availableDayClass = 'grid__cell--available-day'
                 }
+                //Se agrega esto para dejar todos los otros dias que no estan disponibles como desahbilitados
+                //
+            } else {
+                disabledClass = 'grid__cell--disabled';
             }
 
             //cuando rescatamos la celda activa o seleccionada debemos agregar un atributo personalizado (data-cell-id)
