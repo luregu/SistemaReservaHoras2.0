@@ -1,42 +1,41 @@
-/* contenedro calendario */
+/* contenedor calendario */
 
 .calendar,
 .calendar-day {
     padding: 20px 10px;
-    background-color: var(--color-bg-calendar);
-    border-radius: 0.2rem;
+    border-radius: 0.3rem;
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
 }
 
 .calendar__header,
 .calendar-day__header {
     color: var(--third-color);
-    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .calendar-day__header--margin0 {
     margin-bottom: 0;
 }
 
-.calendar .control,
+.control,
 .control-day {
-    color: white;
-    font-weight: bold;
-    font-size: large;
+    color: var(--theme-color);
+    font-size: 2rem;
     background-color: transparent;
     border: none;
     cursor: pointer;
     padding: 0 5px;
     border-radius: 100%;
-    background-color: lightgray;
+    background-color: var(--color-gray-light);
 }
 
 .grid__header,
@@ -46,9 +45,8 @@
 }
 
 .grid__header {
-    /* margin-bottom: 1.2rem; */
     color: var(--secondary-color);
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
     font-weight: 700;
     grid-auto-rows: 40px;
 }
@@ -62,7 +60,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid lightgray;
+    border: 1px solid var(--color-gray-light);
 }
 
 .grid__cell--gd {
@@ -70,21 +68,19 @@
 }
 
 .grid__cell--selected {
-    color: white;
-    font-weight: bold;
+    color: var(--theme-color);
     background-color: var(--color-day-selected);
     border-radius: 100%;
 }
 
 .grid__cell--available-day {
-    color: white;
-    font-weight: bold;
+    color: var(--theme-color);
     background-color: var(--button-third-color);
     border-radius: 100%;
 }
 
 .grid__cell--disabled {
-    color: lightgray;
+    color: var(--color-gray-light);
     cursor: not-allowed;
 }
 

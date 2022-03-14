@@ -1,21 +1,11 @@
 class CalendarDay {
-    constructor(id) {
-        // console.log('id: ', id)
-        //this.cells = [];
-        this.selectedDay = null;
-        //this.selectedDatePrevAvaible = null;
-        //this.avaibleDays = [moment('2022-03-04'), moment('2022-03-10'), moment('2022-03-18'), moment('2022-03-24')];
-        this.currentDay = moment();
-        //obtenemos el elemnento contenedor de nuestro calendario por dia 
+    constructor(id, fecha) {
+        this.selectedDay = fecha;
+        this.dia = null;
+        this.avaibleDays = [moment('2022-03-18'), moment('2022-03-24'), moment('2022-04-05'), moment('2022-04-15'), moment('2022-05-15')];
         this.elCalendarDay = document.getElementById(id);
         this.showTemplate();
         this.elDayName = this.elCalendarDay.querySelector('.day-name');
-
-
-        //this.elGridBody = this.elCalendar.querySelector('.grid__body');
-
-        //this.showCells();
-
     }
 
     showTemplate() {
@@ -27,7 +17,7 @@ class CalendarDay {
         let template = `
         <div class="calendar-day__header calendar-day__header--margin0">
             <button type="button" class="control-day  control--prev-day">&lt;</button>
-            <span class="day-name">${this.currentDay.format('dddd DD [de] MMMM')}</span>
+            <span class="day-name">${this.selectedDay.format('dddd DD [de] MMMM')}</span>
             <button type="button" class="control-day  control--next-day">&gt;</button>
         </div>
         `;
@@ -46,23 +36,88 @@ class CalendarDay {
                     next = true;
                 }
                 this.changeDay(next);
-                this.showHoursAvaible()
             })
         });
     }
 
-
-    showHoursAvaible() {
-        this.elDayName.innerHTML = this.currentDay.format('dddd DD [de] MMMM');
-        // console.log('elDayName : ', this.elDayName);
-        // console.log('calendario por dia');
-    }
     changeDay(next = true) {
+
+        //obtener el indice del arreglo segun la fecha seleccionada
+        //let indexArray = this.avaibleDays.findIndex(a => a.date === this.selectedDay.date);
+        console.log('this.selectedDay : ', this.selectedDay)
+        let indexArray = this.avaibleDays.findIndex(a => a.isSame(this.selectedDay));
+        //let indexArray = this.avaibleDays.indexOf(this.selectedDay);
+        console.log('indexArray ', indexArray);
+        let indexArrayNuevo;
+        console.log(next);
         if (next) {
-            this.currentDay.add(1, 'day');
+            indexArrayNuevo = indexArray + 1;
+
         } else {
-            this.currentDay.subtract(1, 'day');
+            indexArrayNuevo = indexArray - 1;
         }
+        console.log('indexArrayNuevo: ', indexArrayNuevo);
+        let maxIndexArray = (this.avaibleDays.length - 1);
+        //para no seguir retrocedeiendo de la fecha actual disponible en el calendario
+        //me falta validar que enter a esta condicion solo cuando el indice nuevo
+        //se encuentre en el arreglo de dias disponible
+        if (indexArrayNuevo >= 0 && indexArrayNuevo <= maxIndexArray) {
+
+            this.elDayName.innerHTML = this.avaibleDays[(indexArrayNuevo)].format('dddd DD [de] MMMM');
+            let monthCurrencyArray = parseInt(this.avaibleDays[(indexArrayNuevo)].format('MM').trim());
+            console.log(monthCurrencyArray);
+            let monthCurrencyCalendar = parseInt(document.getElementById('month-number').value);
+
+            console.log(monthCurrencyCalendar);
+            let name_class;
+            //pregunto por la diferencias de meses del arrgelo de dias disponibles vs el calendario prindicapl
+            if (monthCurrencyArray != monthCurrencyCalendar) {
+                console.log('distintos');
+                if (monthCurrencyArray > monthCurrencyCalendar) {
+                    name_class = '.control--next';
+                } else {
+                    name_class = '.control--prev';
+                }
+
+                let elControl = document.querySelector(name_class);
+                elControl.dispatchEvent(new Event('click'));
+            }
+
+            //aca mevoy a los dias del mes disponibles y comparo con el del dia del calendario actual selelecionado
+            let avaibleDaysCalendar = document.querySelectorAll('.grid__cell--available-day');
+            console.log('avaibleDaysCalendar ', avaibleDaysCalendar);
+            avaibleDaysCalendar.forEach(elCell => {
+                console.log(this.avaibleDays[(indexArrayNuevo)].format('DD').trim());
+                console.log(elCell.innerHTML.trim());
+                if (parseInt(this.avaibleDays[(indexArrayNuevo)].format('DD').trim()) === parseInt(elCell.innerHTML.trim())) {
+                    console.log('elCell :', elCell);
+                    //aca disparo el evento click en el dia del calendario
+                    elCell.dispatchEvent(new Event('click'));
+                }
+            });
+        }
+    }
+
+
+
+    generateDays(dayToShow = moment()) {
+        if (!moment.isMoment(dayToShow)) {
+            return null;
+        }
+
+
+        //Llenar arreglo con dias a mostrar en el mes actual del calendario
+        let format = moment().format('YYYY-MM-DD');
+        do {
+            cells.push({
+                date: moment(dateStart),
+                isInCurrentMonth: dateStart.month() === monthToShow.month(),
+                isBefore: dateStart.isBefore(format)
+            });
+            dateStart.add(1, 'days');
+        } while (dateStart.isSameOrBefore(dateEnd));
+
+        return cells;
     }
 
     getElement() {
@@ -70,6 +125,6 @@ class CalendarDay {
     }
 
     value() {
-        return this.selectedDay;
+        return this.dia;
     }
 }

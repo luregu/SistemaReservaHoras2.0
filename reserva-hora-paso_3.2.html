@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="/css/reserva-hora-paso-3.1.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="contenedor-logo">
+            <div class="logo"></div>
+        </div>
+
+        <nav class="menu" id="menu">
+            <a href="#" class="menu__link menu__link--close "><img class="menu__img-close" src="img/cerrar.png" alt="cerrar"></a>
+            <!-- <a href="#" class="menu__link menu__link--close ">X</a> -->
+            <a href="https://www.capredena.gob.cl/centros-de-salud" class="menu__link">Inicio</a>
+            <a href="https://www.capredena.gob.cl/centros-de-salud/red-salud/red-de-salud" class="menu__link">Red de Salud</a>
+            <a href="#" class="menu__link">Anular reserva</a>
+            <a href="https://sistlab.capredena.cl:442/" class="menu__link">Revisa tu examen</a>
+            <a href="tel:600 800 6300" class="menu__link">Call center</a>
+        </nav>
+    </header>
+    <section class="titulo-menu">
+        <h1>Reserva de horas</h1>
+        <a href="#menu" class="open-menu">
+            <svg viewBox="0 0 100 80" width="40" height="40">
+                <rect width="100" height="10"></rect>
+                <rect y="30" width="100" height="10"></rect>
+                <rect y="60" width="100" height="10"></rect>
+              </svg>
+        </a>
+    </section>
+
+    <main>
+        <form action="" class="container">
+            <input type="hidden" id="month-number" value="">
+            <!-- header -->
+            <section class="header-section">
+                <h2 class="header-section__title">
+                    <span class="badge badge--seccion p-relative">3</span>
+                    <span class="header-section__text">Reserva de hora</span>
+                </h2>
+            </section>
+            <!-- content-->
+            <section class="content">
+                <section class="datos-reserva">
+                    <section class="datos-reserva__fecha">
+                        <span class="dia-letras">Jueves</span>
+                        <span class="dia-numero">10</span>
+                        <span class="mes">noviembre</span>
+                    </section>
+                    <section class="datos-reserva__profesional">
+                        <span class="nombre">Nombre Profesional</span>
+                        <span class="especialidad">Medicina General</span>
+                        <span class="hora">12:00 horas</span>
+                        <span class="centro">Centro de Salud <b>Santiago</b></span>
+                    </section>
+                </section>
+                <section class="datos-paciente">
+                    <div class="form-control">
+                        <label for="nombre" class="form-control__label">Nombre</label>
+                        <input class="form-control__input" placeholder=" Nombre y Apellido" type="text" name="nombre" id="nombre">
+                    </div>
+                    <div class="form-control">
+                        <label for="telefono" class="form-control__label">Teléfono</label>
+                        <input class="form-control__input" placeholder=" +569 00000000" type="text" name="telefono" id="telefono">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="correo" class="form-control__label">Correo</label>
+                        <input class="form-control__input" placeholder=" email" type="text" name="correo" id="correo">
+                    </div>
+                </section>
+
+            </section>
+
+            <!-- footer -->
+            <section class="actions">
+                <button class="button button--blue-light button--order-2">Volver</button>
+                <button id="button-reservar" class="button button--green button--order-1">Reservar</button>
+            </section>
+        </form>
+
+    </main>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es.min.js"></script>
+    <script type="text/javascript" src="/js/reserva-hora-paso-3.1.js"></script>
+
+
+</body>
+
+</html>

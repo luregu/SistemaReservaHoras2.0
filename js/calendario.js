@@ -4,14 +4,16 @@ class Calendar {
         this.cells = [];
         this.selectedDate = null;
         this.selectedDatePrevAvaible = null;
-        this.avaibleDays = [moment('2022-03-10'), moment('2022-03-18'), moment('2022-03-24')];
+        this.avaibleDays = [moment('2022-03-18'), moment('2022-03-24'), moment('2022-04-05'), moment('2022-04-15'), moment('2022-05-15')];
         this.currentMonth = moment();
         //obtenemos el elemnento contenedor de nuestro calendario
         this.elCalendar = document.getElementById(id);
         this.showTemplate();
         this.elGridBody = this.elCalendar.querySelector('.grid__body');
         this.elMonthName = this.elCalendar.querySelector('.month-name');
+        this.elMonthNumber = document.getElementById('month-number'); //obtengo campo oculto para cargar elmes numero ensu value
         this.showCells();
+        this.setDayByDefault();
 
     }
 
@@ -57,8 +59,23 @@ class Calendar {
                 if (elTarget.classList.contains('control--next')) {
                     next = true;
                 }
+                //Validamos que no pueda retroceder a meses anteriores al mes y año del momento actual
+                if (!next) {
+                    if (parseInt(this.currentMonth.format('YYYYMM')) - 1 < parseInt(moment().format('YYYYMM'))) {
+                        return;
+                    }
+                } else { //Validamos si en el arreglo de fechas con horas disponibles existen fechas con el mes sigueinte al actual
+                    this.currentMonth.add(1, 'month');
+                    let validacion = this.avaibleDays.find(e => moment(this.currentMonth.format('MM')).isSame(e.format('MM')))
+                    this.currentMonth.subtract(1, 'month');
+                    if (validacion === undefined) {
+                        return
+                    }
+                }
+
                 this.changeMonth(next);
                 this.showCells();
+
             })
         });
     }
@@ -68,6 +85,7 @@ class Calendar {
             this.currentMonth.add(1, 'month');
         } else {
             this.currentMonth.subtract(1, 'month');
+
         }
     }
 
@@ -114,9 +132,31 @@ class Calendar {
         `;
         }
         this.elMonthName.innerHTML = this.currentMonth.format('MMM YYYY');
+        this.elMonthNumber.value = parseInt(this.currentMonth.format('MM'));
         this.elGridBody.innerHTML = templateCells;
 
         this.addEventListenerToCells();
+    }
+
+    setDayByDefault() {
+        let avaibleDaysCalendar = document.querySelectorAll('.grid__cell--available-day');
+        avaibleDaysCalendar.forEach(elCell => {
+            if (this.avaibleDays[0].format('DD').trim() === elCell.innerHTML.trim()) {
+                //aca disparo el evento click en el dia del calendario
+                this.selectedDate = this.cells[parseInt(elCell.dataset.cellId)].date;
+                elCell.dispatchEvent(new Event('click'));
+                this.elCalendar.dispatchEvent(new Event('change'));
+                new CalendarDay('calendar-day', this.selectedDate);
+            }
+        });
+        let elFechaEspecialidad = document.querySelector('.fecha');
+        elFechaEspecialidad.innerHTML = this.selectedDate.format('dddd DD [de] MMMM');
+
+
+
+        //let elDayName = document.querySelector('.day-name');
+        //elDayName.innerHTML = this.avaibleDays[0].format('dddd DD [de] MMMM');
+
     }
 
     generateDates(monthToShow = moment()) {
@@ -162,6 +202,7 @@ class Calendar {
             elCell.addEventListener('click', e => {
                 // obtenemos la celda que ha generado el evento click realizado por el usuario
                 let elTarget = e.target;
+                // console.log('eltarget en calaendario : ', elTarget);
                 //se valida que no sea un elemento desabilitado y ademas que no sea el mismo elementp que ya fue seleccionado
                 if (elTarget.classList.contains('grid__cell--disabled') || elTarget.classList.contains('grid__cell--selected')) {
                     return;
@@ -204,10 +245,6 @@ class Calendar {
                 //le agregamos el evento disparador change al elemento calendario
                 //esto lo hacemos una vez que el dia seleccionado ha cambiado
                 this.elCalendar.dispatchEvent(new Event('change'));
-
-
-                //boton continuar deberia validar que la fecha seleccionada tenga la clase dia disponibel para 
-                //hora medica, de lo contrario enviar un alerta
             });
         });
     }
