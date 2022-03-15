@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/master.css">
-    <link rel="stylesheet" href="/css/reserva-hora-paso-3.1.css">
+    <link rel="stylesheet" href="/css/reserva-hora-paso-3.2.css">
     <title>Document</title>
 
 </head>
@@ -40,7 +40,6 @@
 
     <main>
         <form action="" class="container">
-            <input type="hidden" id="month-number" value="">
             <!-- header -->
             <section class="header-section">
                 <h2 class="header-section__title">
@@ -52,9 +51,9 @@
             <section class="content">
                 <section class="datos-reserva">
                     <section class="datos-reserva__fecha">
-                        <span class="dia-letras">Jueves</span>
-                        <span class="dia-numero">10</span>
-                        <span class="mes">noviembre</span>
+                        <span class="dia-letras dia-letras--color">Jueves</span>
+                        <span class="dia-numero dia-numero--color">10</span>
+                        <span class="mes dia-mes--color">noviembre</span>
                     </section>
                     <section class="datos-reserva__profesional">
                         <span class="nombre">Nombre Profesional</span>
@@ -63,28 +62,17 @@
                         <span class="centro">Centro de Salud <b>Santiago</b></span>
                     </section>
                 </section>
-                <section class="datos-paciente">
-                    <div class="form-control">
-                        <label for="nombre" class="form-control__label">Nombre</label>
-                        <input class="form-control__input" placeholder=" Nombre y Apellido" type="text" name="nombre" id="nombre">
-                    </div>
-                    <div class="form-control">
-                        <label for="telefono" class="form-control__label">Teléfono</label>
-                        <input class="form-control__input" placeholder=" +569 00000000" type="text" name="telefono" id="telefono">
-                    </div>
-
-                    <div class="form-control">
-                        <label for="correo" class="form-control__label">Correo</label>
-                        <input class="form-control__input" placeholder=" email" type="text" name="correo" id="correo">
-                    </div>
-                </section>
+                <div class="mensaje-exito">
+                    <span class="mensaje-exito__reserva">Tu hora ha sido reservada con éxito.</span>
+                    <span class="mensaje-exito__comprobante">Revisa el comprobante en tu correo</span>
+                </div>
 
             </section>
 
             <!-- footer -->
             <section class="actions">
-                <button class="button button--blue-light button--order-2">Volver</button>
-                <button id="button-reservar" class="button button--green button--order-1">Reservar</button>
+                <button class="button button--green ">Realizar otra reserva</button>
+                <button class="button button--yellow ">Anular Hora</button>
             </section>
         </form>
 

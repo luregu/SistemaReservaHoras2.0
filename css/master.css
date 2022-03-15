@@ -180,7 +180,9 @@ main {
     min-height: 6.4rem;
     display: flex;
     align-items: center;
-    padding-left: 2rem;
+    /* padding-top: 2rem; */
+    /* border: 1px solid red; */
+    /* padding-left: 2rem; */
 }
 
 .header-section__text {
@@ -211,6 +213,14 @@ main {
     background-color: var(--secondary-color);
 }
 
+.button--yellow {
+    background-color: var(--color-day-selected);
+}
+
+.button--green {
+    background-color: var(--button-third-color);
+}
+
 
 /*Estilos para desktop*/
 
@@ -224,7 +234,8 @@ main {
         height: 200px;
     }
     .header-section {
-        margin-left: 6.4rem;
+        margin-left: 3rem;
+        margin-top: 2rem;
     }
     .contenedor-logo {
         width: 80%;

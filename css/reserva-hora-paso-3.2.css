@@ -1,31 +1,24 @@
+.container {
+    justify-content: flex-start;
+    /* justify-content: space-between; */
+    height: 100%;
+}
+
 .content {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 40%;
+    /* border: 1px dashed red; */
+    margin-top: 1rem;
+    /* justify-content: space-between; */
 }
 
 .datos-reserva {
     display: flex;
-    height: 30%;
-    /* border: 1px dashed red; */
     align-items: center;
-    order: 1;
-}
-
-.form-control {
-    gap: 0.5rem;
-    margin: 0.5rem;
-}
-
-.datos-paciente {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    height: 70%;
-    justify-content: space-evenly;
-    order: 2;
-    margin: 0 auto;
-    /* border: 1px dashed green; */
+    justify-content: flex-start;
+    margin-bottom: 3rem;
+    background-color: var(--color-background30);
 }
 
 .datos-reserva__fecha {
@@ -33,7 +26,6 @@
     flex-direction: column;
     width: 40%;
     height: 10rem;
-    /* border: 1px dashed black; */
     justify-content: center;
     align-items: center;
 }
@@ -43,17 +35,13 @@
     flex-direction: column;
     height: 90%;
     width: 60%;
-    /* border: 1px dashed yellow; */
     justify-content: space-evenly;
 }
 
 .datos-reserva__profesional span {
     display: inline-block;
-    /* border: 1px dashed brown; */
     width: 100%;
     text-align: left;
-    /* padding-top: 0.4rem; */
-    /* font-size: 1.1rem; */
 }
 
 .datos-reserva__profesional .nombre {
@@ -88,18 +76,23 @@
     display: inline-block;
     width: 70%;
     text-align: center;
-    /* padding-top: 0.5rem; */
+    margin-bottom: -0.07rem;
 }
 
 .datos-reserva__fecha .dia-letras {
     background-color: var(--button-primary-color);
     color: var(--theme-color);
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
+    /* border-top-left-radius: 0.5rem; */
+    /* border-top-right-radius: 0.5rem; */
     height: 2.3rem;
     padding-top: 0.5rem;
     font-weight: normal;
     font-size: 1.2rem;
+}
+
+.datos-reserva__fecha .dia-letras--color {
+    background-color: var(--secondary-color);
+    /* margin-bottom: -0.1rem; */
 }
 
 .datos-reserva__fecha .dia-numero {
@@ -110,6 +103,10 @@
     font-weight: bold;
 }
 
+.datos-reserva__fecha .dia-numero--color {
+    background-color: var(--secondary-color);
+}
+
 .datos-reserva__fecha .mes {
     background-color: var(--button-third-color);
     color: var(--theme-color);
@@ -118,20 +115,49 @@
     font-weight: bold;
     text-transform: uppercase;
     padding-top: 0.5rem;
+    padding-bottom: 2rem;
+}
+
+.datos-reserva__fecha .dia-mes--color {
+    background-color: var(--secondary-color);
+}
+
+.mensaje-exito {
+    /* background-color: aqua; */
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mensaje-exito__reserva {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.mensaje-exito__comprobante {
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: var(--fourth-color);
 }
 
 .actions {
     display: flex;
-    justify-content: space-evenly;
-    padding: 1.6rem;
+    flex-direction: column;
+    /* padding: 1.6rem; */
     width: 100%;
-    background-color: var(--background-color-light);
-    max-width: 950px;
-    margin: 0 auto;
+    height: 7rem;
+    /* background-color: var(--background-color-light); */
+    /* margin: 0 auto; */
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid red; */
 }
 
-.button--green {
-    background-color: var(--button-third-color);
+.button {
+    width: 20rem;
 }
 
 
@@ -141,44 +167,24 @@
     .content {
         display: flex;
         flex-direction: column;
-        height: 80%;
-    }
-    .form-control__input {
-        width: 22rem;
-    }
-    .datos-paciente {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        height: 35%;
-        justify-content: space-evenly;
-        order: 1;
-        /* border: 1px dashed red; */
-        padding: 0 4rem;
-        /* margin: 0 auto; */
-        /* padding: 0 5rem; */
+        height: 60%;
     }
     .datos-reserva {
         /* border: 1px dashed darkblue; */
         width: 65%;
-        height: 35%;
+        height: 30%;
         order: 2;
         margin-left: 2rem;
+        margin-top: 2rem;
     }
     .actions {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        background: none;
-        padding: 1.6rem;
-        position: absolute;
-        left: 63rem;
-        top: 45rem;
+        flex-direction: row;
+        justify-content: flex-start;
     }
     .actions .button {
-        margin-top: 1rem;
-        width: 20rem;
         height: 4rem;
+        margin-left: 5rem;
+        margin-right: 3rem;
     }
     .actions .button--order-1 {
         order: 1;
@@ -189,6 +195,7 @@
     .datos-reserva__fecha {
         width: 40%;
         height: 20rem;
+        margin-left: 5rem;
     }
     .datos-reserva__fecha .dia-letras {
         height: 3rem;
@@ -219,5 +226,25 @@
     }
     .datos-reserva__profesional .centro {
         font-size: 1.8rem;
+    }
+    .mensaje-exito {
+        /* background-color: aqua; */
+        height: 10rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        margin-left: 5rem;
+    }
+    .mensaje-exito__reserva {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: var(--secondary-color);
+        margin-right: 0.5rem;
+    }
+    .mensaje-exito__comprobante {
+        font-size: 1.8rem;
+        font-weight: normal;
+        color: var(--secondary-color);
     }
 }
