@@ -1,0 +1,165 @@
+.container {
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    margin-top: 1rem;
+}
+
+.datos-anulacion {
+    width: 100%;
+}
+
+.datos-anulacion__horas {
+    height: 28rem;
+    overflow-y: scroll;
+}
+
+.datos-anulacion__hora {
+    /* display: flex;
+    flex-direction: row; */
+    /* border: 1px dashed red; */
+    background-color: var(--color-background30);
+    margin: 1rem 0;
+}
+
+.container-datos-hora {
+    display: flex;
+    /* flex-direction: row; */
+}
+
+.container-button {
+    display: flex;
+    justify-content: center;
+    /* border: 1px dashed yellow; */
+}
+
+.datos-anulacion__fecha {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.datos-anulacion__profesional {
+    display: flex;
+    flex-direction: column;
+    /* height: 90%; */
+    width: 60%;
+    justify-content: space-evenly;
+}
+
+.datos-anulacion__profesional span {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+}
+
+.datos-anulacion__profesional .nombre {
+    color: var(--button-primary-color);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.datos-anulacion__profesional .especialidad {
+    font-weight: bold;
+    color: var(--button-primary-color);
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
+
+.datos-anulacion__profesional .hora {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+    border: 1px solid var(--color-gray-light);
+    width: 13rem;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+}
+
+.datos-anulacion__profesional .centro {
+    color: var(--fourth-color);
+    font-size: 1.4rem;
+}
+
+.datos-anulacion__fecha span {
+    display: inline-block;
+    width: 70%;
+    text-align: center;
+    margin-bottom: -0.09rem;
+}
+
+.datos-anulacion__fecha .dia-letras {
+    background-color: var(--secondary-color);
+    color: var(--theme-color);
+    height: 2.3rem;
+    padding-top: 0.5rem;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.datos-anulacion__fecha .dia-numero {
+    background-color: var(--secondary-color);
+    color: var(--theme-color);
+    height: 4.5rem;
+    font-size: 4.5rem;
+    font-weight: bold;
+}
+
+.datos-anulacion__fecha .mes {
+    background-color: var(--secondary-color);
+    color: var(--theme-color);
+    height: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+}
+
+.form-control__label {
+    margin-left: 2rem;
+}
+
+.form-control__input {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* gap: 1rem; */
+    width: 70%;
+    margin: 0 2rem;
+}
+
+.button {
+    width: 20rem;
+    margin: 1rem 0 1rem 3rem;
+}
+
+
+/* Para dispositivos de escritorio */
+
+@media (min-width: 950px) {
+    .datos-anulacion {
+        display: flex;
+        height: 100%;
+    }
+    .datos-anulacion__paciente {
+        width: 50%;
+        height: 45%;
+        margin-left: 2rem;
+    }
+    .datos-anulacion__horas {
+        width: 50%;
+        height: 90%;
+    }
+    .container-button {
+        justify-content: end;
+        padding-right: 2rem;
+    }
+}

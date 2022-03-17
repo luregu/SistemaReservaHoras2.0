@@ -18,6 +18,12 @@
 /*Estilos para desktop*/
 
 @media (min-width: 950px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 0 4rem;
+    }
     .actions {
         background-color: var(--theme-color);
     }

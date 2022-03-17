@@ -2,7 +2,7 @@
 
 .calendar,
 .calendar-day {
-    padding: 20px 10px;
+    padding: 2rem 1rem;
     border-radius: 0.3rem;
     width: 100%;
     max-width: 300px;
@@ -48,11 +48,13 @@
     color: var(--secondary-color);
     /* font-family: 'Open Sans', sans-serif; */
     font-weight: 700;
-    grid-auto-rows: 40px;
+    /* grid-auto-rows: 40px; */
+    grid-auto-rows: 4rem;
 }
 
 .grid__body {
-    grid-auto-rows: 40px;
+    /* grid-auto-rows: 40px; */
+    grid-auto-rows: 4rem;
     color: var(--color-cell);
 }
 
@@ -88,5 +90,15 @@
     .calendar {
         min-width: 300px;
         max-width: 365px;
+        padding-bottom: 1rem;
+    }
+    .calendar__header {
+        margin-bottom: 1rem;
+    }
+    .grid__header {
+        grid-auto-rows: 3.5rem;
+    }
+    .grid__body {
+        grid-auto-rows: 3.5rem;
     }
 }

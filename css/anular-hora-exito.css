@@ -1,0 +1,60 @@
+.content {
+    height: 100%;
+    margin-top: 3rem;
+}
+
+.mensaje {
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.mensaje__exito {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.mensaje__comprobante {
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: var(--fourth-color);
+}
+
+.container-button {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    width: 20rem;
+}
+
+@media (min-width: 950px) {
+    .mensaje {
+        height: 4rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        margin-bottom: 4rem;
+        margin-left: 6rem;
+    }
+    .mensaje__exito {
+        font-size: 1.8rem;
+    }
+    .mensaje__comprobante {
+        font-size: 1.8rem;
+        margin-left: 0.8rem;
+    }
+    .container-button {
+        justify-content: start;
+        margin-left: 6rem;
+    }
+    .button {
+        width: 20rem;
+    }
+}

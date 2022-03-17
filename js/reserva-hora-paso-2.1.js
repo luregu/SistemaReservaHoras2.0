@@ -28,10 +28,12 @@ elHoras.forEach(elHorario => {
     elHorario.addEventListener('click', e => {
         // obtenemos el boton con el horario seleccionado
         let elTarget = e.target;
+        console.log(elTarget);
         //obtengo el boton que permite continuar 
         let elBotonContinuar = document.getElementById('button-continuar');
 
         if (elTarget.classList.contains('horario--selected')) {
+            console.log(elTarget.classList.contains('horario--selected'));
             elTarget.classList.remove('horario--selected');
             elBotonContinuar.classList.add('button--display');
             return;
@@ -39,12 +41,13 @@ elHoras.forEach(elHorario => {
         //Deseleccionamos el elemento anterior
         let selectedHorario = document.querySelector('.horario--selected');
 
+        console.log(selectedHorario);
         if (selectedHorario) {
             selectedHorario.classList.remove('horario--selected');
         }
         //elemento actual le agrega la clase
         elTarget.classList.add('horario--selected');
         elBotonContinuar.classList.remove('button--display');
-
+        console.log('fin');
     });
 });

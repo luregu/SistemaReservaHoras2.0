@@ -17,6 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-top: 2rem;
     margin-bottom: 3rem;
     background-color: var(--color-background30);
 }
@@ -122,7 +123,7 @@
     background-color: var(--secondary-color);
 }
 
-.mensaje-exito {
+.mensaje {
     /* background-color: aqua; */
     height: 4rem;
     display: flex;
@@ -131,13 +132,13 @@
     justify-content: space-between;
 }
 
-.mensaje-exito__reserva {
+.mensaje__exito {
     font-size: 1.6rem;
     font-weight: bold;
     color: var(--secondary-color);
 }
 
-.mensaje-exito__comprobante {
+.mensaje__comprobante {
     font-size: 1.6rem;
     font-weight: normal;
     color: var(--fourth-color);
@@ -227,7 +228,7 @@
     .datos-reserva__profesional .centro {
         font-size: 1.8rem;
     }
-    .mensaje-exito {
+    .mensaje {
         /* background-color: aqua; */
         height: 10rem;
         display: flex;
@@ -236,13 +237,13 @@
         justify-content: start;
         margin-left: 5rem;
     }
-    .mensaje-exito__reserva {
+    .mensaje__exito {
         font-size: 1.8rem;
         font-weight: bold;
         color: var(--secondary-color);
         margin-right: 0.5rem;
     }
-    .mensaje-exito__comprobante {
+    .mensaje__comprobante {
         font-size: 1.8rem;
         font-weight: normal;
         color: var(--secondary-color);

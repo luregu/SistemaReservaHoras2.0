@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="/css/reserva-hora-paso-2.2.css">
+    <link rel="stylesheet" href="/css/calendario.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="contenedor-logo">
+            <div class="logo"></div>
+        </div>
+
+        <nav class="menu" id="menu">
+            <a href="#" class="menu__link menu__link--close "><img class="menu__img-close" src="img/cerrar.png" alt="cerrar"></a>
+            <!-- <a href="#" class="menu__link menu__link--close ">X</a> -->
+            <a href="https://www.capredena.gob.cl/centros-de-salud" class="menu__link">Inicio</a>
+            <a href="https://www.capredena.gob.cl/centros-de-salud/red-salud/red-de-salud" class="menu__link">Red de Salud</a>
+            <a href="#" class="menu__link">Anular reserva</a>
+            <a href="https://sistlab.capredena.cl:442/" class="menu__link">Revisa tu examen</a>
+            <a href="tel:600 800 6300" class="menu__link">Call center</a>
+        </nav>
+    </header>
+    <section class="titulo-menu">
+        <h1>Reserva de horas</h1>
+        <a href="#menu" class="open-menu">
+            <svg viewBox="0 0 100 80" width="40" height="40">
+                <rect width="100" height="10"></rect>
+                <rect y="30" width="100" height="10"></rect>
+                <rect y="60" width="100" height="10"></rect>
+              </svg>
+        </a>
+    </section>
+
+    <main>
+        <form action="" class="container">
+            <input type="hidden" id="month-number" value="">
+            <!-- header -->
+            <section class="header-section">
+                <h2 class="header-section__title">
+                    <span class="badge badge--seccion p-relative">2</span>
+                    <span class="header-section__text"> Horas Disponibles </span>
+                </h2>
+            </section>
+
+            <section class="subtitle-section">
+                <span class="subtitle-section__text"> Medicina General </span>
+            </section>
+
+            <!-- content-->
+            <section class="content">
+                <!-- Calendario -->
+                <div class="container-calendar">
+                    <div class="calendar" id="calendar">
+
+                    </div>
+                    <div class="descripcion-calendario">
+                        <div class="circle circle--avaible"></div>
+                        <span class="descripcion-calendario__disponible">Días con horas disponibles</span>
+                        <div class="circle circle--selected"></div>
+                        <span class="descripcion-calendario__seleccionado">Día seleccionado</span>
+                    </div>
+                </div>
+
+                <!-- Calendario solo por dias del mes-->
+                <div class="calendar-day" id="calendar-day">
+                </div>
+
+                <section class="profesionales">
+
+                    <section class="profesionales__header">
+
+                        <div class="fecha-especialidad">
+                            <span class="fecha">Seleccione dia</span>
+                            <span class="especialidad">Medicina General</span>
+                        </div>
+
+                        <div class="busqueda-especialista">
+                            <label for="especialista">Buscar por Especialista</label>
+                            <input type="text" name="especialista" id="especialista" placeholder=" Buscar especialista">
+                        </div>
+                    </section>
+
+                    <section class="profesional">
+                        <div class="profesional__datos">
+                            <img src="/img/IconoMas.png" class="profesional__foto" alt="foto-profesional">
+                            <span class="profesional__nombre"> Nombre del profesional </span>
+                            <button type="button" class="button mostrar-horas">Ver Horas</button>
+                        </div>
+                        <div class="container-horarios">
+                            <section class="horarios">
+                                <button type="button" class="horario">16:00
+                                <!-- <span class="horario__texto">16:00</span> -->
+                            </button>
+                                <button type="button" class="horario">16:30
+                                <!-- <span class="horario__texto">16:30</span> -->
+                            </button>
+                                <button type="button" class="horario">17:00
+                                <!-- <span class="horario__texto">17:00</span> -->
+                            </button>
+                                <button type="button" class="horario">17:30
+                                <!-- <span class="horario__texto">17:30</span> -->
+                            </button>
+                                <button type="button" class="horario">18:00
+                                <!-- <span class="horario__texto">18:00</span> -->
+                            </button>
+                                <button type="button" class="horario">18:30
+                                <!-- <span class="horario__texto">18:30</span> -->
+                            </button>
+                                <button type="button" class="horario">19:00
+                                <!-- <span class="horario__texto">19:00</span> -->
+                            </button>
+                                <button type="button" class="horario">19:30
+                                <!-- <span class="horario__texto">19:30</span> -->
+                            </button>
+                            </section>
+                        </div>
+                    </section>
+                </section>
+
+
+            </section>
+
+            <!-- footer -->
+            <section class="actions">
+                <button class="button button--blue-light">Volver</button>
+                <!-- <button id="button-continuar" class="button button--display">Continuar</button> -->
+                <button id="button-continuar" class="button button--display">Continuar</button>
+            </section>
+        </form>
+
+    </main>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es.min.js"></script>
+    <script type="text/javascript" src="/js/calendario.js"></script>
+    <script type="text/javascript" src="/js/calendarioDiasSemana.js"></script>
+    <script type="text/javascript" src="/js/reserva-hora-paso-2.1.js"></script>
+
+    <script type="text/javascript">
+        let calendar = new Calendar('calendar');
+        let fechaSelected = null;
+        calendar.getElement().addEventListener('change', e => {
+            fechaSelected = calendar.value();
+            console.log('desde js HTML : ', fechaSelected);
+
+            let elFechaEspecialidad = document.querySelector('.fecha');
+            elFechaEspecialidad.innerHTML = fechaSelected.format('dddd DD [de] MMMM');
+
+            let calendarDay = new CalendarDay('calendar-day', fechaSelected);
+        });
+    </script>
+
+</body>
+
+</html>
