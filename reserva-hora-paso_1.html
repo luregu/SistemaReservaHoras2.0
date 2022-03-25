@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/master.css">
     <link rel="stylesheet" href="css/reserva-hora-paso-1.css">
-
     <title>Document</title>
 
 </head>
@@ -60,7 +59,7 @@
                 <!-- RUT -->
                 <div class="form-control">
                     <label for="run" class="form-control__label">Run</label>
-                    <input class="form-control__input" placeholder=" Run" type="text" name="run" id="run">
+                    <input class="form-control__input" required="required" maxlength="10" pattern="\d{1,8}-[\d|kK]{1}" title="Formato Run : 11222333-K" placeholder=" Run : 11222333-K" type="text" name="run" id="run">
                 </div>
                 <div class="contenedor-desktop">
                     <!-- Previsiones -->
@@ -108,7 +107,7 @@
             </section>
         </form>
     </main>
-
+    <script type="text/javascript" src="/js/validaRut.js"></script>
 
 </body>
 

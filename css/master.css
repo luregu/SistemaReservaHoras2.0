@@ -165,24 +165,49 @@ main {
 }
 
 
-/* position helper */
+/* .form-control__input:focus {
+    border: 2px solid red;
+} */
 
+.form-control__input:required {
+    border: 2px solid red;
+}
+
+.form-control__input:valid {
+    border: 2px solid green;
+}
+
+.form-control__input:focus {
+    border: 2px solid purple;
+}
+
+.form-control__input:focus-visible {
+    border: 2px solid purple;
+}
+
+
+/* .form-control__input:focus-visible {
+    border: 2px solid red;
+    /* otras propiedades */
+
+
+}
+*/
+/* position helper */
 .p-relative {
     position: relative;
 }
 
-
 /* seccion */
-
 .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
 }
-
 .header-section {
     /* min-height: 6.4rem; */
+    
     display: flex;
     align-items: center;
     margin-left: 1rem;
@@ -191,7 +216,6 @@ main {
     /* border: 1px solid red; */
     /* padding-left: 2rem; */
 }
-
 .header-section__text {
     background-color: var(--secondary-color);
     padding: 0.9rem;
@@ -201,13 +225,13 @@ main {
     display: inline-block;
     width: 22rem;
 }
-
 .button {
     border: none;
     min-width: 10rem;
     width: 10rem;
     height: 2.8rem;
     /* padding: 0 30px 0 30px; */
+    
     color: var(--theme-color);
     border-radius: 5px;
     background-color: var(--button-primary-color);
@@ -215,22 +239,17 @@ main {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
 }
-
 .button--blue-light {
     background-color: var(--secondary-color);
 }
-
 .button--yellow {
     background-color: var(--color-day-selected);
 }
-
 .button--green {
     background-color: var(--button-third-color);
 }
 
-
 /*Estilos para desktop*/
-
 @media (min-width: 950px) {
     header {
         background-image: url('/img/portada_salud.png');
@@ -241,6 +260,7 @@ main {
         /* height: 20rem; */
         height: 25%;
     }
+    
     .contenedor-logo {
         width: 80%;
         height: 60%;
@@ -250,15 +270,18 @@ main {
         /* margin-top: 4rem; */
         /* margin: 0; */
     }
+    
     .logo {
         background-image: url('/img/logo_salud_Desktop.svg');
         height: 8.3rem;
         width: 36.4rem;
         left: 0;
     }
+    
     .open-menu {
         display: none;
     }
+    
     .menu {
         position: static;
         flex-direction: row;
@@ -268,30 +291,37 @@ main {
         opacity: 1;
         pointer-events: auto;
     }
+    
     .menu__img-close {
         display: none;
     }
+    
     .menu__link--close {
         display: none;
     }
+    
     .menu__link {
         min-width: 10%;
         text-align: center;
         border-style: none;
     }
+    
     main {
         height: 65%;
     }
+    
     h1 {
         font-size: 2.5rem;
         width: 100%;
         text-align: center;
     }
+    
     .contenedor-desktop {
         display: flex;
         justify-content: space-between;
         /* gap: 12rem; */
     }
+    
     .container {
         background-color: #FFFFFF;
         /* height: 100%; */
@@ -302,14 +332,17 @@ main {
         opacity: 0.8;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
+    
     .form-control {
         gap: 1rem;
         margin: 0.5rem;
     }
+    
     .form-control__input {
         /* width: 16rem; */
         width: 20rem;
     }
+    
     .button {
         width: 20rem;
         height: 3.5rem;
